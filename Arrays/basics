@@ -1,0 +1,36 @@
+arrays are collection of homogenous data .
+datatype arr[]-> this declaration happens at compile time .
+new datatype[size]->this happens at runtime.
+
+array objects are stored in heap.
+heap objects are not continuous.
+
+array objects in java may not be continuous and it depends on JVM.
+indexes start from 0.
+"new" keyword is used to crreate an object in heap memory.
+
+"null" is a special type of literal that can only be assigned to a non-primitive datatype but not to a primitive one.
+"null" is a special literal that represents the absence of a value or reference.
+It is used to indicate that a variable does not currently point to any object or value.
+literal:- a literal is a fixed value that is directly written into the code
+int x = 42;   // Decimal literal
+String s = "Hello, World!";  // String literal
+String str = null; // Null literal
+
+primitive datatype cannot be further divided and it doesnot depends upon objects.
+primitives are stored in stack memory and all other like strings type ,array type are stored in heap memory
+
+
+strings are immutable in java -> cannot be changed 
+arrays are mutable in java -> can be changed 
+
+In java there is only pass by value 
+
+/***********************************************2D ARRAY*****************************************************/
+
+.length in 2d array give number of rows 
+int [][] arr=new int[3][4] -> it will return 3 when arr.length is used 
+
+2D arrays in Java can be visualized as arrays of arrays, where each individual index holds a reference to an array.
+You can iterate through array elements using a traditional for loop, an enhanced for-each loop,
+or utilize the `Arrays.toString()` method for simple printing.

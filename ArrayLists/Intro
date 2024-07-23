@@ -1,0 +1,8 @@
+Java ArrayList is a part of the Java collections framework and it is a class of java.util package.
+It provides us with dynamic arrays in Java. Though, it may be slower than standard arrays but can 
+be helpful in programs where lots of manipulation in the array is needed. 
+The main advantage of ArrayList in Java is, that if we declare an array then we need to mention the size, 
+but in ArrayList,it is not needed to mention the size of ArrayList. If you want to mention the size then you can do it.
+
+syntax:
+ArrayList<datatype> list = new ArrayList<>(initialCapacity);

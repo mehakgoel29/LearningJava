@@ -1,0 +1,4 @@
+Linear search is used to search a key element from multiple elements.
+linear search is a sequential search .
+complexity: o(n) where n is the size of Array.
+it has a linear time complexity the time taken increase as the size of input change.

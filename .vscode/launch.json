@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Casecheck",
+            "request": "launch",
+            "mainClass": "Casecheck",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "ConditionalStatements",
+            "request": "launch",
+            "mainClass": "ConditionalStatements",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "CountNums",
+            "request": "launch",
+            "mainClass": "CountNums",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Input",
+            "request": "launch",
+            "mainClass": "Input",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Largest",
+            "request": "launch",
+            "mainClass": "Largest",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Loops",
+            "request": "launch",
+            "mainClass": "Loops",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Main1",
+            "request": "launch",
+            "mainClass": "Main1",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Prime",
+            "request": "launch",
+            "mainClass": "Prime",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "PrimeRange",
+            "request": "launch",
+            "mainClass": "PrimeRange",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "PrimitiveType",
+            "request": "launch",
+            "mainClass": "PrimitiveType",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "Reverse",
+            "request": "launch",
+            "mainClass": "Reverse",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "SwitchCase",
+            "request": "launch",
+            "mainClass": "SwitchCase",
+            "projectName": "DSA_f25d4778"
+        },
+        {
+            "type": "java",
+            "name": "TypeCasting",
+            "request": "launch",
+            "mainClass": "TypeCasting",
+            "projectName": "DSA_f25d4778"
+        }
+    ]
+}
