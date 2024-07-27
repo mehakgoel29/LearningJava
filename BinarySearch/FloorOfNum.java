@@ -1,11 +1,11 @@
-public class FloatOfNum {public static void main(String[] args) {
+public class FloorOfNum {public static void main(String[] args) {
     int[] arr = {2,3,5,9,14,16,18};
     int target = 1;
-    int ans = floatNum(arr, target);
+    int ans = floorNum(arr, target);
     System.out.println(ans);
 }
 
-static int floatNum(int[] arr, int target) {
+static int floorNum(int[] arr, int target) {
     int start = 0;
     int end = arr.length - 1;
     if(target<arr[start]){
