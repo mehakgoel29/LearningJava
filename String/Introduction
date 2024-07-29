@@ -1,0 +1,12 @@
+STRING
+An immutable class that creates new objects when modified, which can consume memory and slow execution. 
+Strings are useful when strings aren't frequently modified, and can make code easier to read and
+understand for simple string operations. However, string manipulation like concatenation and substring 
+can generate a lot of garbage in the heap.
+
+STRINGBUILDER
+A mutable class that can modify a single string without creating additional objects.
+This makes StringBuilder more efficient for frequent string modification, large string construction,
+and performance optimization. StringBuilder provides methods like append(), insert(), delete(), and substring() 
+for string manipulation.
+
