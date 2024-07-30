@@ -12,8 +12,8 @@ static int floorNum(int[] arr, int target) {
         return -1;
     }
     while (start <= end) {
-        int mid = start + (end - start) / 2; // this is done because when we do (start-end)/2 it might exceeds the
-                                             // range of int
+        int mid = start + (end - start) / 2; 
+        // this is done because when we do (start-end)/2 it might exceeds the range of int
         if (target < arr[mid]) {
             end = mid - 1;
         } else if (target > arr[mid]) {
