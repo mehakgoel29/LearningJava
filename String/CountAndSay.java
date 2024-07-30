@@ -1,5 +1,8 @@
 public class CountAndSay {
     public static String countAndSay(int n) {
+        if(n==1){
+            return "1";
+        }
         String currentTerm = "1";
         for (int i = 2; i <= n; i++) {
             String nextTerm = "";
@@ -20,8 +23,10 @@ public class CountAndSay {
         return currentTerm;
     }
     public static void main(String[] args) {
-        int n = 5;
-        String result = countAndSay(n);
-        System.out.println("The " + n + "th term is: " + result);
+        int n = 10;
+        for (int i = 1; i <=n; i++) {
+            String result = countAndSay(i);
+            System.out.println("The " + i + "th term is: " + result);
+        }
     }
 }
