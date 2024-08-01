@@ -24,14 +24,16 @@ public class FirstAndLastPosition {
             } else if (target > nums[mid]) {
                 start = mid + 1;
             } else {
+                //potential ans
                 ans = mid;
-                if (findStartIndex) {
+                if (findStartIndex) { //searching for first index
                     end = mid - 1;
-                } else {
+                } else {             //searching for last index 
                     start = mid + 1;
                 }
             }
         }
+        //final ans
         return ans;
-    }
+    }   
 }
