@@ -9,7 +9,7 @@ public class SmallestChar {
     static char smallestChar(char[] letters, char target) {
         int start = 0;
         int end = letters.length - 1;
-
+    
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (target < letters[mid]) {
@@ -18,9 +18,14 @@ public class SmallestChar {
                 start = mid + 1;
             }
         }
-        
-        // Return the smallest character greater than the target.
-        // If start is equal to letters.length, it means we have to wrap around to the beginning of the array.
-        return letters[start % letters.length];
+    
+        // If start is equal to letters.length, return the first element (wrap around)
+        //for example we have an target that is not present in the array then it should return the 0th indexed element 
+        if (start == letters.length) {
+            return letters[0];
+        }
+        // Otherwise, return the element at the start index
+        return letters[start];
     }
+    
 }

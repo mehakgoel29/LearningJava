@@ -1,63 +1,48 @@
 public class RotatedBinanySearch {
-    public static void main(String[] args) {
-        int[] nums={4,5,6,7,0,1,2};
-        System.out.println(search(nums, 0));
-    }
-    public static int search(int[] nums, int target) {
-        int pivot = findPivot(nums);
-
-        // if you did not find a pivot, it means the array is not rotated
-        if (pivot == -1) {
-            // just do normal binary search
-            return binarySearch(nums, target, 0 , nums.length - 1);
+    /*A rotated binary search is a variant of the traditional binary search algorithm used to find an element 
+    in a rotated sorted array. A rotated sorted array is an array that was originally sorted but then some leading 
+    elements were moved to the end. 
+    For example,the sorted array [1, 2, 3, 4, 5, 6, 7] might be rotated to [4, 5, 6, 7, 1, 2, 3]. */
+    public class RotatedBinarySearch {
+        public static void main(String[] args) {
+            int[] nums = {4, 5, 6, 7, 0, 1, 2};
+            int target = 0;
+            int index = search(nums, target);
+            System.out.println("Index of target: " + index);
         }
-
-        // if pivot is found, you have found 2 asc sorted arrays
-        if (nums[pivot] == target) {
-            return pivot;
-        }
-
-        if (target >= nums[0]) {
-            return binarySearch(nums, target, 0, pivot - 1);
-        }
-
-        return binarySearch(nums, target, pivot + 1, nums.length - 1);
     
-    }
-    public static int findPivot(int []arr){
-        int start = 0;
-        int end = arr.length - 1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (mid < end && arr[mid] > arr[mid + 1]) {
-                return mid;
+        public static int search(int[] nums, int target) {
+            int start = 0;
+            int end = nums.length - 1;
+    
+            while (start <= end) {
+                int mid = start + (end - start) / 2;
+    
+                // Check if mid is the target
+                if (nums[mid] == target) {
+                    return mid;
+                }
+    
+                // Determine which part is sorted
+                if (nums[start] <= nums[mid]) {
+                    // Left part is sorted
+                    if (target >= nums[start] && target < nums[mid]) {
+                        end = mid - 1; // Search in the left sorted part
+                    } else {
+                        start = mid + 1; // Search in the right part
+                    }
+                } else {
+                    // Right part is sorted
+                    if (target > nums[mid] && target <= nums[end]) {
+                        start = mid + 1; // Search in the right sorted part
+                    } else {
+                        end = mid - 1; // Search in the left part
+                    }
+                }
             }
-            if (mid > start && arr[mid] < arr[mid - 1]) {
-                return mid-1;
-            }
-            if (arr[mid] <= arr[start]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
+    
+            // Target is not found
+            return -1;
         }
-        return -1;
-
-
     }
-    static int binarySearch(int[] arr, int target, int start, int end) {
-        while(start <= end) {
-            int mid = start + (end - start) / 2;
-
-            if (target < arr[mid]) {
-                end = mid - 1;
-            } else if (target > arr[mid]) {
-                start = mid + 1;
-            } else {
-                return mid;
-            }
-        }
-        return -1;
-    }
-}
-
+}    

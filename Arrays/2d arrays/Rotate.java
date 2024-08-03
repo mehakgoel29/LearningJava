@@ -1,22 +1,20 @@
-import java.util.Arrays;
-
 public class Rotate {
-    public static void main(String[] args) {
-        int [][] arr={
-            {1,2,3,4},
-            {4,5},
-            {6,7,8}
-        };
-       for (int rows = 0; rows< arr.length; rows++) {
-            System.out.println(Arrays.toString(arr[rows])+" ");
+    public static void main(String[] args)
+    {
+        int[][] mat = { { 1, 2, 3 },
+                        { 4, 5, 6 },
+                        { 7, 8, 9 } };
+ 
+        rotateMatrix(mat,3);
+    }
+    static void rotateMatrix(int mat[][],int N)
+    {
+        for (int i = N - 1; i >= 0; i--) {
+            for (int j = N - 1; j >= 0; j--)
+                System.out.print(mat[i][j] + " ");
+ 
+            System.out.println();
         }
-    }  
-    static int[][] rotate(int[][] arr){
-        int firstElement=arr[0][0];
-        for (int i = 1; i < arr.length; i++) {
-           arr[i-1][]=arr[i][];
-        }
-        arr[arr.length-1][]=firstElement;
     }
 }
 
