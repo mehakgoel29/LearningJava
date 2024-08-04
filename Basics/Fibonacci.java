@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Fibonacci {
     public static void main(String[] args) {
-        // 0,1,1,2,3,5,8...
+        // 0, 1, 1, 2, 3, 5, 8...
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         long a = 0;   
@@ -14,13 +14,16 @@ public class Fibonacci {
          */
         long b = 1;
         int count = 2;
-        while (count <= n) {
-            long temp = b;
-            b = b + a;
-            a = temp;
+        System.out.print(a + " " + b + " "); // Print the first two numbers separately
+
+        while (count < n) { // Adjusted to print n numbers in total
+            long temp = a;
+            a=b;
+            b=temp+a;
             count++;
+            System.out.print(b + " "); // Print b after updating it
         }
-        System.out.println(b);
         sc.close();
     }
 }
+
