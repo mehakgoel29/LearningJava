@@ -6,7 +6,7 @@ public class Occurances {
     }
     static boolean checkdigit(String name){
         boolean isNumeric=true;
-        for (int i = 0; i < name.length(); i++) {
+        for (int i = 0; i < name.length();) {
             if(name.charAt(i)<'0'|| name.charAt(i)>'9'){
                return false;
             }
