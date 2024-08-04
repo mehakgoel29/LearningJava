@@ -1,4 +1,4 @@
-public class test {
+public class Occurances {
     public static void main(String[] args) {
         String name="mehak";
         boolean ans=checkdigit(name);
