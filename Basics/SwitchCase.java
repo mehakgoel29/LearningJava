@@ -33,8 +33,10 @@ public class SwitchCase {
          switch (days) {
             case 1,2,3,4,5->System.out.println("weekdays");
             case 6,7->System.out.println("weekends");
+            default->System.out.println("enter a valid number");
          }
          sc.close();
     }
 }
+
 
