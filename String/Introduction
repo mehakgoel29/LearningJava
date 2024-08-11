@@ -10,3 +10,10 @@ This makes StringBuilder more efficient for frequent string modification, large 
 and performance optimization. StringBuilder provides methods like append(), insert(), delete(), and substring() 
 for string manipulation.
 
+STRING POOL
+string pool is a separate memory structure inside a heap.It makes our program more optimized as it doesnot create a diff
+object for each ref variable.string pool is a storage area in memory that saves space and improves performance by 
+reusing common string values.
+String a="kunal"
+String b="kunal"
+a and b are poitning to one object only
