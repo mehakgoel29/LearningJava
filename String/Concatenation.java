@@ -15,7 +15,7 @@ public class Concatenation {
         // System.out.println(new Integer(2)+new ArrayList<>()); 
          // will not work because any one from these two is not string
 
-        System.out.println(new Integer(2)+""+new ArrayList<>()); 
+         System.out.println(Integer.valueOf(2) + "" + new ArrayList<>()); 
         //will work because there is a string
 
     }
