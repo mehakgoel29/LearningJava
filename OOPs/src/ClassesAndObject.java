@@ -3,8 +3,8 @@ public class ClassesAndObject {
         // If we want to create a customized datatype then we use classes
         Student[] students = new Student[5];
         //new is used for dynamic memory location
-        Student other = new Student(mehak);
         Student mehak = new Student();
+        Student Random = new Student(mehak);
 
 //        mehak.rollno = 587;
 //        mehak.name = "Mehak Goel";
@@ -14,7 +14,6 @@ public class ClassesAndObject {
         System.out.println("Name: " + mehak.name);
         System.out.println("Marks: " + mehak.marks);
         mehak.greeting();
-        kunal.Student();
 
 
     }
