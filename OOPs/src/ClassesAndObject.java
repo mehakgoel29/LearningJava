@@ -55,6 +55,7 @@ class Student {
         If there is ambiguity between the instance variables and parameters,
         this keyword resolves the problem of ambiguity.
         It states what object you are referring to at that particular instance of time
+        this keyword cannot be used with static keyword because static do no depends upon object
         */
     Student() {
        //this is how we call a constructor from another constructor
