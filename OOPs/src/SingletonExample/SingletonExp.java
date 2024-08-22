@@ -6,6 +6,7 @@ public class SingletonExp {
     public static SingletonExp getInstance() {
         if(instance==null){
             instance=new SingletonExp();
+            System.out.println("instance created");
         }
         return instance;
     }
