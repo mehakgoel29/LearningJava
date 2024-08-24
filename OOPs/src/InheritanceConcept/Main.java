@@ -26,5 +26,7 @@ public class Main {
                 +"Width- "+ box2.width+" ");
         System.out.println(box3.weight);
 
+        BoxPrice obj7=new BoxPrice(1,2,3,4,5);
+        System.out.println(obj7.length);
     }
 }
