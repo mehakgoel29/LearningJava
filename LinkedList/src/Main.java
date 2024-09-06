@@ -3,6 +3,7 @@ import com.sun.security.jgss.GSSUtil;
 public class Main {
     public static void main(String[] args)
     {
+        /*
         System.out.println("Linked List");
         SinglyLL list = new SinglyLL();
         // Add elements in front
@@ -22,6 +23,17 @@ public class Main {
         list.display();
         System.out.println("list after deletion of element at a specific index:"+list.deleteAtPos(3));
         list.display();
+        */
+        DoublyLL list=new DoublyLL();
+        list.insertFirst(23);
+        list.insertFirst(56);
+        list.insertFirst(3);
+        list.insertLast(89);
+        list.insertLast(29);
+        list.insertAtPos(89076,2);
+        list.display();
+        System.out.println(list.find(56));
+
 
     }
 }
