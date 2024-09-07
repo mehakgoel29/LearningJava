@@ -53,21 +53,79 @@ public class DoublyLL {
             temp=temp.next;
         }
         Node newNode = new Node(val,temp.next,temp);
-        temp.next=newNode;
-        temp.next.prev=newNode;
+        if (temp.next != null) {
+            temp.next.prev = newNode;
+        }
+        temp.next = newNode;
 
         size++;
     }
+
+
+    //DELETION
+    public void deleteFirst(){
+        if(head!=null){
+            // If there's only one node in the list
+            if (head.next == null) {
+                head = null;
+            }
+            else {
+                head = head.next;
+                head.prev = null;
+            }size--;
+    }}
+
+    public void deleteLast(){
+        if(head!=null){
+            if (head.next == null) {
+                head = null;
+            }
+            else{
+                Node temp=head;
+                while(temp.next!=null){
+                    temp=temp.next;
+                }
+                temp.prev.next = null;
+            }
+        }
+        size--;
+    }
+
+    public void deleteAtPos(int pos){
+        if(pos==0){
+            deleteFirst();
+            return;
+        }
+        if(pos==size){
+            deleteLast();
+            return;
+        }
+        Node temp=head;
+        for (int i = 0; i < pos-1; i++) {
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+        temp.next.prev=temp;
+        size--;
+    }
+
     //DISPLAY
     public void display(){
         Node temp = head;
-        Node last = null;
         while (temp!=null){
             System.out.print(temp.val+"->");
-            last = temp;
             temp=temp.next;
         }
         System.out.println("null");
+
+    }
+    public void printReverse(){
+        Node temp = head;
+        Node last = null;
+        while (temp!=null){
+            last = temp;
+            temp=temp.next;
+        }
         while(last!=null){
             System.out.print(last.val+"->");
             last=last.prev;

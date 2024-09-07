@@ -24,16 +24,36 @@ public class Main {
         System.out.println("list after deletion of element at a specific index:"+list.deleteAtPos(3));
         list.display();
         */
-        DoublyLL list=new DoublyLL();
+//        DoublyLL list=new DoublyLL();
+//        list.insertFirst(23);
+//        list.insertFirst(56);
+//        list.insertFirst(3);
+//        list.insertLast(89);
+//        list.insertLast(29);
+//        list.insertAtPos(89076,2);
+//        list.display();
+//        list.printReverse();
+//        list.deleteFirst();
+//        list.display();
+//        list.deleteLast();
+//        list.display();
+//        list.deleteAtPos(2);
+//        list.display();
+
+        CircularLL list= new CircularLL();
         list.insertFirst(23);
         list.insertFirst(56);
         list.insertFirst(3);
         list.insertLast(89);
         list.insertLast(29);
-        list.insertAtPos(89076,2);
+        list.insertLast(34);
+        list.insertAtPos(80976,2);
         list.display();
-        System.out.println(list.find(56));
-
+        list.deleteFirst();
+        list.deleteLast();
+        list.display();
+        //list.deleteAtPos(3);
+        list.display();
 
     }
 }
