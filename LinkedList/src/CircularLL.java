@@ -87,7 +87,6 @@ public class CircularLL {
             temp = temp.next;
         }
         temp.next=temp.next.next;
-        temp.next=temp;
     }
 
     //DISPLAY

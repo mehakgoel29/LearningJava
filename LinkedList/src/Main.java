@@ -52,7 +52,7 @@ public class Main {
         list.deleteFirst();
         list.deleteLast();
         list.display();
-        //list.deleteAtPos(3);
+        list.deleteAtPos(3);
         list.display();
 
     }
