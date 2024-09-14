@@ -1,33 +1,36 @@
-public class FindDuplicateNumber {
+import java.util.ArrayList;
 
-    public static int findDuplicate(int[] nums) {
-        // Phase 1: Using Tortoise and Hare to find the intersection point
-        int tortoise = nums[0];
-        int hare = nums[0];
-
-        do {
-            tortoise = nums[tortoise];   // Move tortoise by 1 step
-            hare = nums[nums[hare]];     // Move hare by 2 steps
-        } while (tortoise != hare);      // Loop until they meet
-
-        // Phase 2: Find the entrance to the cycle
-        tortoise = nums[0];              // Reset tortoise to start of the array
-        while (tortoise != hare) {
-            tortoise = nums[tortoise];   // Move both by 1 step
-            hare = nums[hare];
-        }
-
-        return hare;                     // Both pointers meet at the duplicate number
+public class FindDuplicateNumber{
+    public static void main(String[] args) {
+        int[] array = {1, 3, 3, 4, 5};
+        findDuplicate(array);
     }
 
-    public static void main(String[] args) {
-        int[] nums1 = {1, 3, 4, 2, 2};
-        System.out.println("Duplicate number: " + findDuplicate(nums1));  // Output: 2
+    public static void findDuplicate(int[] array) {
+      /*  int n = array.length - 1;
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        int actualSum = 0;
+        for (int j = 0; j < array.length; j++) {
+            actualSum += array[j];
+        }
+        int repetition = actualSum - sum;
+        System.out.println("The repeated element is: " + repetition);
+        */
 
-        int[] nums2 = {3, 1, 3, 4, 2};
-        System.out.println("Duplicate number: " + findDuplicate(nums2));  // Output: 3
+        ArrayList<Integer> duplicates = new ArrayList<>();
+        System.out.println("Duplicate elements in the array:");
 
-        int[] nums3 = {3, 3, 3, 3, 3};
-        System.out.println("Duplicate number: " + findDuplicate(nums3));  // Output: 3
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j] && !duplicates.contains(array[i])) {
+                    duplicates.add(array[i]);
+                    System.out.println(array[i]);
+                }
+            }
+        }
     }
 }
+
