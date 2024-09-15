@@ -31,7 +31,7 @@ public class LoopDetection {
 
         if (!hasLoop) {
             System.out.println("No loop to find starting point.");
-            return -1;
+
         }
 
         slow = head;
@@ -44,7 +44,7 @@ public class LoopDetection {
         return slow;
     }
 
-    public void removeLoop(Node head) {
+    public static void removeLoop(Node head) {
         Node start = startingPoint(head);
         if (start == null) return; // No loop found
 
@@ -67,7 +67,9 @@ public class LoopDetection {
 
         // Creating a loop for testing
         head.next.next.next.next.next = head.next.next;  // Creates loop starting at 15
-
+        LoopDetection(head);
+        startingPoint(head);
+        removeLoop(head);
         if (LoopDetection(head)) {
             startingPoint(head);
         }
