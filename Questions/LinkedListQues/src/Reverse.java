@@ -46,7 +46,7 @@ public class Reverse {
 
         display();       // Display original list
         ReverseList(); // Reverse the list using iteration
-        head = Rev(head); // Update head after recursion
+//      head = Rev(head); // Update head after recursion
         display();       // Display reversed list
     }
 
