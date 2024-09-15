@@ -15,21 +15,21 @@ public class MinJumps {
 
         // Initialize variables
         int jumps = 0;        // number of jumps needed
-        int farthest = 0;     // the farthest index we can reach
-        int currentEnd = 0;   // the end of the current jump range
+        int des = 0;         // the des index we can reach
+        int pos = 0;         // curr pos
 
         // Traverse the array (but not including the last element)
         for (int i = 0; i < n - 1; i++) {
-            // Update farthest index we can reach
-            farthest = Math.max(farthest, i + arr[i]);
+            // Update des index we can reach
+            des = Math.max(des, i + arr[i]);
 
             // If we reach the end of the current jump range
-            if (i == currentEnd) {
+            if (i == pos) {
                 jumps++;         // Increment the jump count
-                currentEnd = farthest;   // Set the end for the next jump
+                pos = des;   // Set the end for the next jump
 
                 // If we've already reached or passed the last index
-                if (currentEnd >= n - 1) {
+                if (pos >= n - 1) {
                     return jumps;
                 }
             }
