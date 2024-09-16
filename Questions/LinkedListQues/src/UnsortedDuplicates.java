@@ -1,34 +1,32 @@
-public class FindDuplicates {
-    //NOTE:
-    //This code is for sorted and consecutive duplicate values
-    //if the values are not consecutive then this will not work
-
-
+public class UnsortedDuplicates {
     static Node head;
     static Node tail;
     static int size=0;
 
-    public FindDuplicates(){
+    public UnsortedDuplicates(){
         this.size=0;
     }
 
     public static void findDuplicate(Node head){
-        Node curr = head;
+        Node curr=head;
         while(curr!=null && curr.next!=null){
-            if(curr.val==curr.next.val){
-                curr.next=curr.next.next;
-                // curr=curr.next;
-                // Do NOT move `curr` to the next, check again for consecutive duplicates
-                size--;
+            Node newCurr=curr;
+            while(newCurr!=null && newCurr.next!=null){
+                if(curr.val==newCurr.next.val){
+                    newCurr.next=newCurr.next.next;
+                    size--;
+                }
+                else{
+                    newCurr=newCurr.next;
+                }
             }
-            else{
-                curr=curr.next;
-            }
+            curr=curr.next;
         }
+
     }
 
     public void insert(int val){ //insert in end of the list
-        Node newNode = new Node(val);
+      Node newNode = new Node(val);
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -39,7 +37,7 @@ public class FindDuplicates {
         size++;
     }
     public void display() {
-        Node temp = head;
+       Node temp = head;
         while (temp != null) {
             System.out.print(temp.val + " -> ");
             temp = temp.next;
@@ -48,14 +46,14 @@ public class FindDuplicates {
     }
 
     public static void main(String[] args) {
-        FindDuplicates list = new FindDuplicates();
+        UnsortedDuplicates list = new UnsortedDuplicates();
         // Add elements
         list.insert(3);
         list.insert(2);
         list.insert(2);
-        list.insert(2);
         list.insert(7);
         list.insert(29);
+        list.insert(2);
         // Display linked list
         list.display();
         System.out.println(list.size);
