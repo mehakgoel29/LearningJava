@@ -26,7 +26,7 @@ public class MinJumps {
             // If we reach the end of the current jump range
             if (i == pos) {
                 jumps++;         // Increment the jump count
-                pos = des;   // Set the end for the next jump
+                pos = des;      // Set the end for the next jump
 
                 // If we've already reached or passed the last index
                 if (pos >= n - 1) {
