@@ -1,7 +1,7 @@
 public class MinJumps {
 
-    public static int minJumps(int[] arr) {
-        int n = arr.length;
+    public static int minJumps(int[] nums) {
+        int n = nums.length;
 
         // If the array has only one element, we're already at the end
         if (n == 1) {
@@ -9,7 +9,7 @@ public class MinJumps {
         }
 
         // If the first element is 0, we can't move forward
-        if (arr[0] == 0) {
+        if (nums[0] == 0) {
             return -1;
         }
 
@@ -21,7 +21,7 @@ public class MinJumps {
         // Traverse the array (but not including the last element)
         for (int i = 0; i < n - 1; i++) {
             // Update des index we can reach
-            des = Math.max(des, i + arr[i]);
+            des = Math.max(des, i + nums[i]);
 
             // If we reach the end of the current jump range
             if (i == pos) {

@@ -8,8 +8,8 @@ public class RainWater {
         System.out.println("Total rainwater trapped: " + waterTrapped);
     }
 
-    static int rainwater(int[] arr) {
-        int n = arr.length;
+    static int rainwater(int[] height) {
+        int n = height.length;
         if (n == 0) return 0;
 
         // Initialize arrays
@@ -17,15 +17,15 @@ public class RainWater {
         rightarr = new int[n];
         
         // Compute leftarr
-        leftarr[0] = arr[0];
+        leftarr[0] = height[0];
         for (int i = 1; i < n; i++) {
-            leftarr[i] = Math.max(leftarr[i - 1], arr[i]);
+            leftarr[i] = Math.max(leftarr[i - 1], height[i]);
         }
 
         // Compute rightarr
-        rightarr[n - 1] = arr[n - 1];
+        rightarr[n - 1] = height[n - 1];
         for (int i = n - 2; i >= 0; i--) {
-            rightarr[i] = Math.max(rightarr[i + 1], arr[i]);
+            rightarr[i] = Math.max(rightarr[i + 1], height[i]);
         }
 
         // Compute minarr and total trapped water
@@ -33,7 +33,7 @@ public class RainWater {
         int totalWater = 0;
         for (int i = 0; i < n; i++) {
             minarr[i] = Math.min(leftarr[i], rightarr[i]);
-            totalWater += minarr[i] - arr[i];
+            totalWater += minarr[i] - height[i];
         }
 
         return totalWater;

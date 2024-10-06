@@ -8,7 +8,7 @@ public class PassingNum {
             return ;
         }
          System.out.println(n);
-         fun(n--);
+       //  fun(n--);
          fun(--n);
          /*
          n-- vs --n
