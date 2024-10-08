@@ -1,0 +1,45 @@
+/*Morris traversal is an in-place traversal algorithm for binary trees
+     that doesn’t use a stack or recursion.
+     In this space complexity is o(1) and
+     we visit each node at most 3 times
+     1. to make link
+     2 to print value
+     3.to remove link
+
+    1.Initialize current as the root node.
+
+    2.While current is not NULL (i.e., there are nodes to process):
+
+        Step 1: If current has no left child:
+
+        a) Visit (print) the current node’s value.
+        b) Move to the right child of current (i.e., current = current->right).
+        Explanation: If there is no left subtree, this node is already in the
+        correct position for inorder traversal (visit root after left subtree),
+         so we can directly print it and move to its right child.
+
+        Step 2: If current has a left child:
+
+        a) Find the rightmost node (predecessor) in the left subtree of current.
+        To do this, go to current->left and keep moving to the right until you
+        reach a node whose right child is NULL or current itself
+        (loop until predecessor->right == NULL or predecessor->right == current).
+
+                Case 1: If the right child of the predecessor is NULL:
+
+                a) Create a temporary link: Set the predecessor->right to point to current
+                (this is done to come back to the current node after visiting the left subtree).
+                b) Move current to its left child (i.e., current = current->left).
+                Explanation: By establishing this link, we save our place in the tree,
+                so after we finish the left subtree, we can return to this node.
+                We then move to the left child to continue the inorder traversal.
+
+                Case 2: If the right child of the predecessor is current
+                (meaning we’ve already created a temporary link and are now revisiting current):
+
+                a) Remove the temporary link: Set predecessor->right back to NULL.
+                b) Visit (print) the current node’s value.
+                c) Move current to its right child (i.e., current = current->right).
+                Explanation: Now that the left subtree has been processed, we visit the root (current node)
+                and continue to its right subtree by restoring the original tree structure.     */
+
