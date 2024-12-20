@@ -11,6 +11,7 @@ public class Patterns{
         pattern17(4);
         pattern28(5);
         pattern30(5);
+        pattern31(5);
     }
     static void pattern1(int n ){
     /*
@@ -287,6 +288,33 @@ static void pattern30(int n) {
 
     }
    
-    }}
+    }
+    static void pattern31(int n) {
+    /*
+
+    *
+    *1
+    *23
+    *456
+    *78910
+
+    */
+        System.out.println("pattern 31");
+        // Print upper portion
+        int num=1;
+        for (int rows = 1; rows <=n ; rows++) {
+            for (int cols = 1; cols <=rows ; cols++) {
+                if(cols==1){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print(num+" ");
+                    num++;
+                }
+            }
+            System.out.println();
+        }
+    }
+}
           
 
