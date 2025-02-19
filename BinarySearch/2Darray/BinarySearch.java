@@ -24,6 +24,7 @@ public class BinarySearch{
         return new int[]{r,c};
       }
       //reducing search space 
+       //as we are standing on the max of that roe then we can only find next greater in the next row and we can find smaller in the same row but diff col 
       else if(arr[r][c]>target){
         c--;
       }
