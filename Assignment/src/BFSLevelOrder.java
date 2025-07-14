@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFS {
+public class BFSLevelOrder {
     // Function to perform level order traversal
     public void levelOrder(TreeNode root) {
         if (root == null) {
@@ -34,10 +34,29 @@ public class BFS {
             }
         }
     }
+    public static void levelOrder2(TreeNode root){
+        if(root==null){
+            return;
+        }
+        Queue<TreeNode> q=new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            TreeNode temp=q.poll();
+            System.out.print(temp.val+" ");
+            if(temp.left!=null){
+                q.add(temp.left);
+            }
+            if(temp.right!=null){
+                q.add(temp.right);
+            }
+
+        }
+    }
+
 
     public static void main(String[] args) {
         // Create a binary tree for demonstration
-        BFS tree = new BFS();
+        BFSLevelOrder tree = new BFSLevelOrder();
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -49,6 +68,8 @@ public class BFS {
         // Perform level order traversal
         System.out.println("Level order traversal of the binary tree:");
         tree.levelOrder(root);
+        tree.levelOrder2(root);
+
     }
     // TreeNode class representing each node of the binary tree
     static class TreeNode {

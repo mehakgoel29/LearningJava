@@ -1,32 +1,35 @@
 package InheritanceConcept;
 
-public class Box {
-    int length;
-    int width;
-    int height;
-    private int ll;
+public class Box{
+    int l;
+    //private  int l;
+    int w;
+    int h;
 
+
+    // Default constructor
     Box(){
-    this.length=-1;
-    this.width=-1;
-    this.height=-1;
+        l=w=h=-1;
     }
 
-    public Box(int length, int width, int height) {
-        this.length = length;
-        this.width = width;
-        this.height = height;
-    }
-
+    //cube
     Box(int side){
-    this.length=side;
-    this.width=side;
-    this.height=side;
-    }
-    Box(Box old){
-       this.length=old.length;
-       this.height= old.height;
-       this.width= old.width;
+        l=w=h=side;
     }
 
+    // Parameterized constructor
+    Box(int l, int w,int h){
+        this.l=l;
+        this.w=w;
+        this.h=h;
+    }
+
+    // Copy constructor
+    //It is used to create a new object that is a copy of an existing object.
+    Box(Box old){
+        this.l=old.l;
+        this.h=old.h;
+        this.w=old.w;
+
+    }
 }

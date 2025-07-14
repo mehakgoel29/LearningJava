@@ -4,16 +4,22 @@ public class BoxWeight extends Box {  //inheritance done using extends keyword
     int weight;
     BoxWeight(){
         this.weight=-1;
-        //this.ll=-1;
+        //this.l=-1;
         // cannot access it in child class because
-        //'ll' has private access in 'InheritanceConcept. Box'
+        //'l' has private access in 'InheritanceConcept. Box'
     }
+
+    //copy constructor
     BoxWeight(BoxWeight other){
         super(other);
         weight= other.weight;
     }
-    BoxWeight(int length,int width, int height,int weight ){
-        super(length, width, height);
+
+    BoxWeight(int l,int w, int h,int weight ){
+        super(l, w, h);
+        // here l can be accessed even being private because Box class is calling it and not BoxWeight
+
+
         //use case1:
         // call a constructor of base class
 
@@ -27,5 +33,7 @@ public class BoxWeight extends Box {  //inheritance done using extends keyword
 
         this.weight=weight;
     }
+
+
 
 }
