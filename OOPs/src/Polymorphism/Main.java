@@ -7,7 +7,7 @@ public class Main {
         Blue blue = new Blue();
         Colours pink = new Pink();
 
-        pink.color();
+        pink.color();   // color method in pink overrides the color in colours
     }
 
 }

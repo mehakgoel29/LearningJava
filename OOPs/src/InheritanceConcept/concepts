@@ -75,3 +75,5 @@ The object is future-ready. If I’m handling the object using a Box reference,
 I can still access its full capabilities in the future through downcasting —
 without rewriting the existing code. This approach is highly useful in building scalable applications.
 
+🔹🔹🔹🔹🔹EVERY CLASS HAS OBJECT CLASS AS ITS SUPERCLASS 🔹🔹🔹🔹🔹
+

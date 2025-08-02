@@ -3,3 +3,15 @@ poly- many
 morphism- ways to represent
 
 simply it means many ways to represent a single entity
+
+🔍 Why are languages without polymorphism called Object-Based Languages?
+Because:
+They use objects and classes, so they are based on objects.
+But they don’t fully follow OOP principles, especially polymorphism or inheritance.
+Hence, they are not called Object-Oriented, but rather Object-Based.
+
+✅ 1. Compile-Time Polymorphism (Static Polymorphism)
+It is the type of polymorphism where the method call is resolved at compile time. It is achieved through method overloading or operator overloading.
+
+✅ 2. Runtime Polymorphism (Dynamic Polymorphism)
+It is the type of polymorphism where the method call is resolved at runtime. It is achieved through method overriding using inheritance.
