@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class Traversals {
 
-        static class node {
+        public static class node {
             int data;
             node left;
             node right;
