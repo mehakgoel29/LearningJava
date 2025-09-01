@@ -8,6 +8,9 @@ public class BoxWeight extends Box {  //inheritance done using extends keyword
         // cannot access it in child class because
         //'l' has private access in 'InheritanceConcept. Box'
     }
+//    static void greetings(){
+//        System.out.println("hey i am in boxWeight class.greetings!");
+//    }
 
     //copy constructor
     BoxWeight(BoxWeight other){

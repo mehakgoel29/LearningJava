@@ -1,0 +1,52 @@
+Q1: What is the advantage of abstract methods?
+Abstract methods are useful because:
+They enforce rules – subclasses must implement them.
+They support polymorphism – one reference can call different implementations.
+They provide code reusability & flexibility – common code stays in abstract class, specific code in subclasses.
+They enable multiple inheritance (via interfaces) – a class can implement multiple contracts.
+
+Q2: Why do abstract methods not have a body?
+Because the purpose of an abstract method is not to provide implementation but to define a blueprint (contract).
+The actual implementation is given by the subclasses that inherit it.
+
+Q3.Why must a class containing an abstract method be declared abstract?
+In Java, if a class contains an abstract method, it must be declared abstract because the class becomes
+incomplete. Abstract methods don’t have a body, so objects of such a class cannot be created directly.
+By declaring the class abstract, we make it clear that this class is only a blueprint, and its subclasses
+are responsible for providing the actual implementation of the abstract methods.
+
+Q4.Rule for Abstract Methods in Inheritance
+If subclass is concrete → it must implement all abstract methods.
+If subclass is also abstract → it can skip some (or all) implementations, and pass the responsibility further.
+
+Q5.Can abstract methods be static in Java?
+Abstract method → must be overridden.
+Static method → cannot be overridden.(belongs to class itself, not to instances)
+Therefore, abstract static method is not allowed in Java.
+
+Q6.Why can’t we create objects of an abstract class?
+We cannot create objects of an abstract class because an abstract class is incomplete.
+It may contain abstract methods (methods without a body), which means it doesn’t provide full implementation.
+If objects of an abstract class were allowed, we could end up calling abstract methods that have no definition —
+which would lead to runtime errors. To prevent this, Java makes it a compile-time rule that you cannot instantiate an abstract class.
+Abstract classes are meant to act as blueprints or base classes.
+Their actual object is created through their concrete subclasses, which provide the missing implementations.
+
+
+Q7.Can Abstract class be final ?
+An abstract class cannot be final. Abstract means the class must be inherited, and final means it cannot be inherited.
+Since these are contradictory, Java does not allow an abstract final class.
+
+Q8.Why can’t we achieve multiple inheritance using abstract classes, even though they also contain abstract methods like interfaces?
+
+   Abstract class still allows implementation
+   •	Abstract classes can have both abstract methods (without body) and concrete methods (with body).
+   •	If Java allowed multiple inheritance of abstract classes, then there could be a diamond problem (method body conflict).
+
+Q9.Why are variables in an interface always public static final in Java?
+All variables in an interface are implicitly public static final because interfaces are meant to define constants,
+not object states. static ensures the variable is shared, final ensures it cannot be changed, and public ensures it is accessible to all implementing classes.
+
+Q10.Can methods in an interface be final in Java?
+No, methods in an interface cannot be declared final. The purpose of an interface is to let implementing classes provide their own version of the method.
+If a method were final, it couldn’t be overridden, which would completely contradict the idea of interfaces

@@ -10,11 +10,23 @@ public class Humans {
     // it wil also be 7 billion
 
 
+    //static objects cannot be overriden
+
     public Humans(int age, float height, String name) {
         this.age = age;
         this.height = height;
         this.name = name;
         Humans.population+=1;
-        //not using object name beacuse poplulation is static and is pobject independent
+        //not using object name beacuse poplulation is static and is object independent
     }
+    void show() {
+        System.out.println("Original");
+    }
+
+    // ❌ This is not overriding — it's a duplicate method
+//    void show() {
+//        System.out.println("Changed");
+//    }
+
+
 }

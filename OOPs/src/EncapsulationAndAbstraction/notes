@@ -1,0 +1,23 @@
+Encapsulation
+
+Encapsulation means wrapping up the implementation of data members and methods together in a single unit (class) and controlling their access.
+It is mainly about data hiding using access modifiers.
+
+
+
+
+Abstraction
+
+Abstraction means hiding unnecessary details and showing only the important and necessary information to the user.
+Example:
+When we use System.out.println("Hello");, we don’t know the complex internal implementation — we only know it prints text.
+
+
+
+
+Key Difference
+
+Encapsulation deals with internal implementation — how data and methods are organized and protected inside a class.
+Abstraction deals with design problems — deciding which details to show to the outside world and which to hide.
+
+

@@ -26,5 +26,25 @@ public class Main {
         System.out.println("BOX1: "+"Height- "+box1.h+", "  +"Length- "+ box1.l+", "  +"Width- "+ box1.w+" ");
         System.out.println("BOX2: "+"Height- "+box2.h+", "  +"Length- "+ box2.l+", "  +"Width- "+ box2.w+" ");
         System.out.println(box3.weight);
+
+
+        BoxWeight bx=new BoxWeight();  // can be inherited
+        /*here:
+        Your method is static.
+        Static methods are resolved at compile time based on reference type.
+        What you’re seeing is called method hiding, not overriding.
+
+
+
+        Method Hiding means:
+
+        When a static method in a subclass has the same name, parameters, and return type as a static method in its superclass, the subclass’s method hides the superclass’s method — it does not override it.
+        Key Points about Method Hiding
+        Happens only with static methods.
+        */
+
+
+        Box bx1 =new BoxWeight();  // if not static toh yha override ho jana chiye tha
+        bx.greetings(); //still calls Box method because static methods cannot be overridden
     }
 }

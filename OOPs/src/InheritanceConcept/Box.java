@@ -7,6 +7,10 @@ public class Box{
     int h;
 
 
+    static void greetings(){
+        System.out.println("hey i am in box class.greetings!");
+    }
+
     // Default constructor
     Box(){
         l=w=h=-1;
